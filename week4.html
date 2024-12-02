@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #mole{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            cursor: pointer;
+            background: rgb(187, 187, 187);
+            width: 150px;
+        }
+        h1{
+            margin: 0px;
+            font-size: 20px;
+            font-style: bold;
+        }
+        #notes{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>MOLECULE AND MOLECULAR  STRUCTURE</h1>
+    <hr>
+    <div id="molecules">
+        
+        <h3>Molecules, the smallest units of chemical compounds, form when atoms bond together. These bonds result from the interaction of valence electrons the electrons in the atom's outermost shell. Atoms strive to fulfill the Octet Rule, seeking eight electrons in their outer shell for stability. This leads to the formation of two types of bonds ionic and covalent. In ionic bonding, atoms transfer electrons to achieve stable configurations, as seen in sodium chloride (NaCl), where sodium loses an electron and chlorine gains it. In contrast, covalent bonds involve the sharing of electrons between atoms, such as when two chlorine atoms form Cl₂ by sharing electrons. 
+            <br><br>
+            Lewis dot diagrams visually represent valence electrons and their role in bonding, helping to illustrate how stability is achieved through the Octet Rule. These diagrams emphasize the importance of electron interactions in forming molecules. By combining these bonding mechanisms, atoms can create homonuclear molecules (containing atoms of the same element) or heteronuclear molecules (made of different elements). This process underpins the formation of chemical compounds and explains the diversity of molecular structures in nature. </h3>
+    </div> 
+    <div id="notes">
+        <h1>1. Molecules are groups of atoms bonded together, forming the smallest unit of chemical compounds.</h1>
+        <br>
+        <h1>2. Atoms bond to fulfill the Octet Rule, seeking eight electrons in their outer shell for stability.</h1>
+        <br>
+        <h1>3. Ionic bonds involve electron transfer, while covalent bonds involve electron sharing.</h1>
+        <br>
+        <h1>4. Lewis dot diagrams visually represent valence electrons and bonding interactions.</h1>
+        <br>
+        <h1>5. Molecules can be homonuclear (same element) or heteronuclear (different elements).</h1>
+    </div>   
+    <div id="mole">
+        <h1 id="hi">NOTES</h1>
+    </div>
+    <script>
+        let a = document.getElementById("mole");
+        let b = document.getElementById("molecules");
+        let b1 = document.getElementById("notes");
+        let q = 0;
+        let h = document.getElementById("hi");
+        a.addEventListener('click' , (e)=>{
+            if(q == 0){
+                b.style.display = "none";
+                b1.style.display = "block";
+                h.innerText = "BACK";
+                q++;
+            }else{
+                b1.style.display = "none";
+                b.style.display = "block";
+                h.innerText = "NOTES";
+                q--;
+            }
+            
+        })
+    </script>
+</body>
+</html>

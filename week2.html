@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #big{
+            width: 600px;
+        }
+        h1{
+            font-size: 20px;
+            margin: 0%;
+        }
+        #th{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: rgb(187, 187, 187);
+            height: auto;
+            width: auto;
+            cursor: pointer;
+        }
+        .pha{
+            cursor: pointer;
+            background: rgb(66, 66, 66);
+            display: none;
+        }
+        .lagay{
+            position: absolute;
+            top: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="big">
+        <h1>The Big Bang created light elements like hydrogen, helium, and lithium within the universe’s first 20 minutes through intense heat and density. Stars then formed and became factories for heavier elements through stellar nucleosynthesis, where hydrogen and helium fuse into elements like carbon and iron. Stars’ life cycles vary based on their mass: smaller stars evolve into white dwarfs, while massive ones explode as supernovas, creating heavier elements and sometimes forming neutron stars or black holes. Cosmic phenomena like cosmic ray spallation further diversify elements by breaking heavy nuclei into lighter ones. 
+            <br><br>
+            Stars start as protostars, with their fate determined by their mass: small ones become brown dwarfs, medium ones evolve like the Sun, and massive ones turn into supergiant. These stars burn through hydrogen, helium, and heavier elements, with massive stars eventually collapsing and creating materials beyond iron during supernova explosions. </h1>
+    </div>
+    <div id="th">
+        <div id="bigbang">
+            <h1>Phases of bigbang theory</h1>
+        </div>
+        <div class="pha">
+            <h1>1st phase</h1>
+        </div>
+        <div class="pha">
+            <h1>2nd phase</h1>
+        </div>
+        <div class="pha">
+            <h1>3rd phase</h1>
+        </div>
+        <div class="pha">
+            <h1>4th phase</h1>
+        </div>
+        <div class="pha">
+            <h1>5th phase</h1>
+        </div>
+    </div>
+    <div class="lagay">
+        <h1 >Quarks form protons and neutrons as the universe cools.</h1>
+    </div>
+    <div class="lagay">
+        <h1 >Light elements form in a hot, foggy universe.</h1>
+    </div>
+    <div class="lagay">
+        <h1 >Atoms, mostly hydrogen and helium, begin to form.</h1>
+    </div>
+    <div class="lagay">
+        <h1 >Galaxies and stars emerge from hydrogen and helium clouds.</h1>
+    </div>
+    <div class="lagay">
+        <h1 >Dying stars create heavy elements for new stars and planets.</h1>
+    </div>
+
+    <script>
+        let b = document.getElementById("big");
+        let a = document.getElementsByClassName("pha");
+        let a1 = document.getElementById("bigbang");
+        let q = 0;
+        a1.addEventListener('click' , (e)=>{
+            if(q == 0){
+                a[0].style.display =  "block";
+                a[1].style.display =  "block";
+                a[2].style.display =  "block";
+                a[3].style.display =  "block";
+                a[4].style.display =  "block";
+                q++;
+            }else{
+                a[0].style.display =  "none";
+                a[1].style.display =  "none";
+                a[2].style.display =  "none";
+                a[3].style.display =  "none";
+                a[4].style.display =  "none";
+                q--;
+            }
+            
+        })
+        let w = document.getElementsByClassName("lagay");
+        a[0].addEventListener('click' , (e)=>{
+            b.style.display = "none";
+            w[0].style.display = "block";
+            w[1].style.display = "none";
+            w[2].style.display = "none";
+            w[3].style.display = "none";
+            w[4].style.display = "none";
+
+        })
+        a[1].addEventListener('click' , (e)=>{
+            b.style.display = "none";
+            w[0].style.display = "none";
+            w[1].style.display = "block";
+            w[2].style.display = "none";
+            w[3].style.display = "none";
+            w[4].style.display = "none";
+
+        })
+        a[2].addEventListener('click' , (e)=>{
+            b.style.display = "none";
+            w[0].style.display = "none";
+            w[1].style.display = "none";
+            w[2].style.display = "block";
+            w[3].style.display = "none";
+            w[4].style.display = "none";
+
+        })
+        a[3].addEventListener('click' , (e)=>{
+            b.style.display = "none";
+            w[0].style.display = "none";
+            w[1].style.display = "none";
+            w[2].style.display = "none";
+            w[3].style.display = "block";
+            w[4].style.display = "none";
+
+        })
+        a[4].addEventListener('click' , (e)=>{
+            b.style.display = "none";
+            w[0].style.display = "none";
+            w[1].style.display = "none";
+            w[2].style.display = "none";
+            w[3].style.display = "none";
+            w[4].style.display = "block";
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #chem{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: rgb(187, 187, 187);
+            width: 290px;
+        }
+        h1{
+            font-size: 20px;
+            margin: 0px;
+        }
+        #chemical{
+            cursor: pointer;
+        }
+        .che{
+            background: rgb(66, 66, 66);
+            cursor: pointer;
+            display: none;
+        }
+        .input{
+            width: 500px;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            display: none;
+        }
+        #inpuu{
+            width: 500px;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chem">
+        <div id="chemical">
+            <h1>Chemical Reaction</h1>
+        </div>
+        <div class="che">
+            <h1>Synthesis / Combination</h1>
+        </div>
+        <div class="che">
+            <h1>Decomposition</h1>
+        </div>
+        <div class="che">
+            <h1>Substitution / Single Replacement</h1>
+        </div>
+        <div class="che">
+            <h1>Metathesis / Double Replacement</h1>
+        </div>
+    </div>
+    <div class="input">
+        <h1>Reaction that involves combining at least two (2) elements together to form a compound</h1>
+        <h2>Equation: A + B → AB</h2>
+        <h3>Example: 2Na+ (s) + Cl2 (g) → 2NaCl (s)</h3>
+    </div>
+    <div class="input">
+        <h1>Reaction that involves breaking down a compound into its base constituents, or it involves combination, but releases some base constituents as by-products.</h1>
+        <h2>AB → A + B or A + B → AB + base constituent</h2>
+        <h3>Example: 2H2O (l) → 2H2 (g) + O2 (g)</h3>
+    </div>
+    <div class="input">
+        <h1>Reaction involving two (2) substances, wherein one substance takes the place of one of the constituents of the compound, forming a new compound without decomposing.</h1>
+        <h2>Equation: AB + C → AC + B</h2>
+        <h3>Example: 2HNO3 + 2 Ag+ → 2AgNO3 + H2(g)</h3>
+    </div>
+    <div class="input">
+        <h1>Reaction between two (2) compounds that switches one of their constituents over the other, forming new substances in their own right. </h1>
+        <h2>Equation: AB + CD → AD + CB</h2>
+        <h3>Example: HIO + NaNO2 → NaIO + HNO2</h3>
+    </div>
+    <div id="inpuu">
+        <h1>Whenever chemical bonds between atoms are established or broken, a chemical reaction is initiated. The chemicals that are introduced into a chemical reaction are referred to as the reactants, and the compounds that are created at the conclusion of the reaction are referred to as the products of the reaction.</h1>
+    </div>
+    <script>
+        let a = document.getElementById("chemical");
+        let a1 = document.getElementsByClassName("che");
+        let q = 0;
+        let o = document.getElementById("inpuu");
+        a.addEventListener('click' , (e)=>{
+            if(q == 0){
+                a1[0].style.display = "block";
+                a1[1].style.display = "block";
+                a1[2].style.display = "block";
+                a1[3].style.display = "block";
+                q++;
+            }else{
+                a1[0].style.display = "none";
+                a1[1].style.display = "none";
+                a1[2].style.display = "none";
+                a1[3].style.display = "none";
+                q--;
+            }
+        })
+        let d = document.getElementsByClassName("input");
+        a1[0].addEventListener('click' , (e)=> {
+            d[0].style.display = "block";
+            d[1].style.display = "none";
+            d[2].style.display = "none";
+            d[3].style.display = "none";
+            o.style.display = "none";
+        })
+        a1[1].addEventListener('click' , (e)=> {
+            d[0].style.display = "none";
+            d[1].style.display = "block";
+            d[2].style.display = "none";
+            d[3].style.display = "none";
+            o.style.display = "none";
+
+        })
+        a1[2].addEventListener('click' , (e)=> {
+            d[0].style.display = "none";
+            d[1].style.display = "none";
+            d[2].style.display = "block";
+            d[3].style.display = "none";
+            o.style.display = "none";
+
+        })
+        a1[3].addEventListener('click' , (e)=> {
+            d[0].style.display = "none";
+            d[1].style.display = "none";
+            d[2].style.display = "none";
+            d[3].style.display = "block";
+            o.style.display = "none";
+        })
+    </script>
+</body>
+</html>
